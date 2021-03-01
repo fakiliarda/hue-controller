@@ -15,11 +15,11 @@ public class HueService {
     }
 
     public void turnLightOn(int id) {
-        hueClient.changeLightStateById(id, true);
+        hueClient.changeLightState(id, true);
     }
 
     public void turnLightOff(int id) {
-        hueClient.changeLightStateById(id, false);
+        hueClient.changeLightState(id, false);
     }
 
     public void turnAllLightsOn() {
@@ -31,7 +31,11 @@ public class HueService {
     }
 
     public void flick() {
-        hueClient.flick();
+        hueClient.flickLights();
+    }
+
+    public void turnLightsOnAndRed() {
+        hueClient.changeAllLightStatesOnAndColor(0);
     }
 
 }

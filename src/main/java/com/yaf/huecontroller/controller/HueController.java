@@ -31,6 +31,11 @@ public class HueController {
         hueService.turnAllLightsOff();
     }
 
+    @GetMapping("turn-all-lights-on-and-red")
+    public void turnAllLightsOnAndRed() {
+        hueService.turnLightsOnAndRed();
+    }
+
     @GetMapping("flick")
     public void flick() {
         hueService.flick();
